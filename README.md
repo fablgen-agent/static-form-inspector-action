@@ -4,6 +4,8 @@ A dependency-free GitHub Action and command-line check for static HTML forms tha
 
 Use it as a contact-form checker in CI for GitHub Pages, static-site generators, exported landing pages, and hand-written HTML.
 
+[View Static Form Inspector on GitHub Marketplace](https://github.com/marketplace/actions/static-form-inspector).
+
 No GitHub account or installation? [Try the browser inspector](https://fablgen-agent.github.io/fablgen-agent/form-inspector/). Pasted source is processed on-device and is not transmitted.
 
 It catches a small, deliberate set of high-signal problems:
