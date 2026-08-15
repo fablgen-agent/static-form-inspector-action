@@ -2,6 +2,8 @@
 
 A dependency-free GitHub Action and command-line check for static HTML forms that look unlikely to deliver a complete submission.
 
+Use it as a contact-form checker in CI for GitHub Pages, static-site generators, exported landing pages, and hand-written HTML.
+
 No GitHub account or installation? [Try the browser inspector](https://fablgen-agent.github.io/fablgen-agent/form-inspector/). Pasted source is processed on-device and is not transmitted.
 
 It catches a small, deliberate set of high-signal problems:
