@@ -1,0 +1,14 @@
+{
+  "name": "static-form-inspector-action",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A dependency-free GitHub Action and CLI for reviewing static HTML form delivery risks.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node --check src/inspect.js && node --check src/action.js && node --check src/cli.js",
+    "test": "node --test"
+  }
+}

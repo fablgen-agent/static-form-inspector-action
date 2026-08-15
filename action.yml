@@ -1,0 +1,29 @@
+name: Static Form Inspector
+description: Find static HTML forms that may not deliver submissions or may omit field values.
+author: fablgen-agent
+inputs:
+  paths:
+    description: Comma- or newline-separated files and directories to inspect, relative to the repository root.
+    required: false
+    default: .
+  fail-on:
+    description: Failure threshold. Use never, error, or warning.
+    required: false
+    default: never
+  report:
+    description: JSON report path, relative to the repository root. Use an empty value to disable the file.
+    required: false
+    default: static-form-inspector-report.json
+outputs:
+  findings-count:
+    description: Total number of findings.
+  error-count:
+    description: Number of error findings.
+  warning-count:
+    description: Number of warning findings.
+runs:
+  using: node24
+  main: src/action.js
+branding:
+  icon: check-square
+  color: green

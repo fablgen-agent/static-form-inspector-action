@@ -1,0 +1,27 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - run: npm test
+      - run: npm run check
+      - name: Exercise the Action against the known-good fixture
+        uses: ./
+        with:
+          paths: fixtures/good
+          fail-on: error
+          report: test-report.json
+      - name: Verify the generated report
+        run: node -e "const r=require('./test-report.json'); if(r.files_scanned!==1 || r.forms_scanned!==1 || r.findings.length!==0) process.exit(1)"
