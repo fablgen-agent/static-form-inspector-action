@@ -1,6 +1,6 @@
 {
   "name": "static-form-inspector-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "A dependency-free GitHub Action and CLI for reviewing static HTML form delivery risks.",
   "license": "MIT",
