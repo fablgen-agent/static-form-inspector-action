@@ -1,5 +1,5 @@
 name: Static Form Inspector
-description: Find static HTML forms that may not deliver submissions or may omit field values.
+description: Find static HTML contact forms that may not deliver submissions or may omit field values.
 author: fablgen-agent
 inputs:
   paths:
