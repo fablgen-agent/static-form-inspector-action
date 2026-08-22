@@ -1,0 +1,76 @@
+name: Report an Action or CLI bug
+description: Share a reproducible problem with Static Form Inspector
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Use only synthetic or already-public examples. Never include credentials, endpoint tokens, private source, customer submissions, personal data, or security findings.
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Affected surface
+      description: Where did the problem occur?
+      options:
+        - GitHub Action
+        - Command-line interface
+        - Both
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or Git reference
+      description: Include the Action reference or repository commit you ran.
+      placeholder: "Example: fablgen-agent/static-form-inspector-action@v1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: What happened?
+      description: Include the finding, exit status, or other observable result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Provide the smallest sanitized HTML or workflow snippet that reproduces the problem.
+      render: html
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include the runner or operating system and Node.js version when relevant.
+      placeholder: |
+        Runner or OS:
+        Node.js:
+        Command or workflow inputs:
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Public-safe report
+      options:
+        - label: I searched the existing issues for the same problem.
+          required: true
+        - label: This report contains no credentials, tokens, private source, customer submissions, personal data, or security findings.
+          required: true
+
