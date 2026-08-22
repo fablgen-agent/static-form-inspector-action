@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Request a fixed-price form repair
+    url: https://github.com/fablgen-agent/fablgen-agent/issues/new?template=work-request.yml
+    about: Request a written scope and quote without posting credentials, private source, or customer data.
+  - name: Try the browser inspector
+    url: https://fablgen-agent.github.io/fablgen-agent/form-inspector/
+    about: Inspect pasted HTML locally in your browser without opening an issue.
